@@ -1,305 +1,535 @@
 
 <!DOCTYPE html>
+<html lang="en">
 
-<!--[if IEMobile 7]>
-  <html lang="en-US" prefix="og: http://ogp.me/ns#" :xmlns\:fb='https://www.facebook.com/2008/fbml' :xmlns\:og='http://ogp.me/ns#' class='no-js iem7' itemscope='itemscope' itemtype='http://schema.org/Article' xmlns='http://www.w3.org/1999/xhtml'>
-<![endif]-->
+<head>
 
-<!--[if lt IE 7]>
-  <html lang="en-US" prefix="og: http://ogp.me/ns#" :xmlns\:fb='https://www.facebook.com/2008/fbml' :xmlns\:og='http://ogp.me/ns#' class='no-js ie6 oldie' itemscope='itemscope' itemtype='http://schema.org/Article' xmlns='http://www.w3.org/1999/xhtml'>
-<![endif]-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!--[if IE 7]>
-  <html lang="en-US" prefix="og: http://ogp.me/ns#" :xmlns\:fb='https://www.facebook.com/2008/fbml' :xmlns\:og='http://ogp.me/ns#' class='no-js ie7 oldie' itemscope='itemscope' itemtype='http://schema.org/Article' xmlns='http://www.w3.org/1999/xhtml'>
-<![endif]-->
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<!--[if IE 8]>
-  <html lang="en-US" prefix="og: http://ogp.me/ns#" :xmlns\:fb='https://www.facebook.com/2008/fbml' :xmlns\:og='http://ogp.me/ns#' class='no-js ie8 oldie' itemscope='itemscope' itemtype='http://schema.org/Article' xmlns='http://www.w3.org/1999/xhtml'>
-<![endif]-->
+  <!-- Custom CSS -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
 
-<html lang="en-US" prefix="og: http://ogp.me/ns#" :xmlns:fb='https://www.facebook.com/2008/fbml' :xmlns:og='http://ogp.me/ns#' class='no-js' itemscope='itemscope' itemtype='http://schema.org/Article' xmlns='http://www.w3.org/1999/xhtml'>
+  <title> Wong's Wok </title>
 
-	<head>
-	  <meta charset='utf-8'>
-		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-	  <meta content='Push Interactive, (ia@pushhere.com)' name='author'>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+  function initialize() {
+    var mapProp = {
+      center:new google.maps.LatLng(38.655495,-90.305494),
+      zoom:15,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("googlemap"),mapProp);
+    var marker=new google.maps.Marker({
+      position:new google.maps.LatLng(38.655495,-90.305494),
+    });
 
-		<!-- Mobile -->
-		<meta content='True' name='HandheldFriendly'>
-		<meta content='320' name='MobileOptimized'>
-		<meta content='width=device-width,initial-scale=1.0, maximum-scale=1.0' name='viewport'>
+    marker.setMap(map);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
 
-		<!-- Facebook Open Graph & Google Schema (for +1s) -->
-		<!-- <meta content='1234567890' property='fb:app_id'> -->
-		<meta content='' property='og:site_name'>
-		<meta content='' property='og:url'>
-		<meta content='' property='og:title'>
-		<meta content='website' property='og:type'>
-		<meta content='' property='og:description'>
-		<meta content='' property='og:image'>
+  </script>
 
+</head>
 
-		<title>Italio</title>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="http://italiokitchen.com/wp-content/themes/italio/inc/assets/styles/core.css" />
-	  		 	<link rel="stylesheet" href="http://italiokitchen.com/wp-content/themes/italio/inc/assets/styles/pages/index.css" />
-			
-	  <!-- Icons and Favicon -->
-	  <link href='http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/favicon.png' rel='icon' sizes='32x32' type='image/png'>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top"><font size="5" color="red">Wong's Wok </font></a>
+      </div>
 
-		<!-- Apple Icons -->
-		<link href='http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/apple/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114' type='image/png'>
-		<link href='http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/apple/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72' type='image/png'>
-		<link href='http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/apple/apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon-precomposed' sizes='57x57' type='image/png'>
-		<link href='http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/apple/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed' type='image/png'>
-
-		<!-- Javascript -->
-	  	<script src='http://italiokitchen.com/wp-content/themes/italio/inc/assets/scripts/site.min.js'></script>
-		<script src='http://italiokitchen.com/wp-content/themes/italio/inc/assets/scripts/core.min.js'></script>
-
-  <!-- IE conditionals -->
-	  <!--[if (lt IE 9) & (!IEMobile)]>
-		  <script src='http://italiokitchen.com/wp-content/themes/italio/inc/assets/scripts/libs/html5.min.js'></script>
-      <script src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/scripts/libs/selectivizr.min.js"></script>
-	    <script src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js'></script>
-	    <script>
-	      //<![CDATA[
-	        window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-	      //]]>
-	    </script>
-		<![endif]-->
-
-    <!--[if IE 9]>
-      <link rel="stylesheet" type="text/css" media="all" href="http://italiokitchen.com/wp-content/themes/italio/inc/assets/styles/ie9.css" />
-    <![endif]-->
-
-    <!--[if IE 8]>
-      <link rel="stylesheet" type="text/css" media="all" href="http://italiokitchen.com/wp-content/themes/italio/inc/assets/styles/ie8.css" />
-    <![endif]-->
-
-    <!--[if IE 7]>
-      <link rel="stylesheet" type="text/css" media="all" href="http://italiokitchen.com/wp-content/themes/italio/inc/assets/styles/ie7.css" />
-    <![endif]-->
-
-	  <!-- Typekit or Google web font scripts -->
-	  <!-- <script src="http://use.typekit.com/acn6uvl.js"></script> -->
-	  <!-- <script>try{Typekit.load();}catch(e){}</script> -->
-
-<link rel="stylesheet" href="http://italiokitchen.com/popup/jquery.popup.css" type="text/css">
-		<script type="text/javascript" src="http://italiokitchen.com/popup/jquery.popup.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {	
-				$(".js__p_start").simplePopup();
-			});
-		</script>
-
-	</head>
-
-	<body id="index">
-		<section id="shell">
-			<header>
-				<div id='header-container'>
-					<div class='header-content'>
-						<h1><a href='/'>Italio</a></h1>
-
-						<nav>
-							<ul id="main-nav" class="nav"><li id="menu-item-109" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-109"><a href="/">Our Story</a></li>
-<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="http://italiokitchen.com/menu-page/">Menu</a></li>
-<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://italiokitchen.com/locations/">Locations</a></li>
-<li id="menu-item-110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-110"><a href="https://italio.alohaorderonline.com/Locations.aspx">Online Ordering</a></li>
-<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="http://italiokitchen.com/news-specials/">News &#038; Specials</a></li>
-<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="http://italiokitchen.com/mi-italio/">Mi Italio</a></li>
-</ul>						</nav>
-
-						<div id='social'>
-							<p><a href='http://twitter.com/Italio' target='_blank'>Follow Italio on Twitter</a></p>
-			        <p><a href='http://www.facebook.com/ItalioKitchen' target='_blank'>Like Italio on Facebook</a></p>
-			        <p><a href='http://www.yelp.com/biz/italio-boca-raton' target='_blank'>Review Italio on Yelp</a></p>
-			     	</div>
-			    </div>
-			  </div>
-			</header>    <div id="index-page" class='page'>
-      <div id="loader">
-        <div class='overlay'></div><!-- .overlay -->
-        <div id='loader-container'>
-          <div>
-                  <p id='top-text'>Fresh Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Fast Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Speak Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Fast Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Italian To-Go.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Italian To-Go.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Fast-Casual Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Get News &#038; Specials.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Authentic Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Authentic Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Italian Accent.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Imported Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  <p id='top-text'>Authentic Italian.</p>
-          <p id='bottom-text'>The best thing since sliced pizza.</p>
-                  </div>
-        </div><!-- #loader-container -->
-      </div><!-- #loader -->
-
-      <section id='slideshow'>
-        <div class='content'>
-          <ul id="slidershow-shell">
-                                      <li class="ls-layer">
-                <h2 class="ls-s1" style="margin-top: 0px !important;">STEAK PIADA </h2>
-
-                <p class="ls-s2" style="margin-top: 70px !important;">Soon-to-be classic. Soon-to-be devoured.</p>
-
-                <img class="ls-s3" style="top: 120px; left: 50%;" src="http://italiokitchen.com/wp-content/uploads/2012/10/STEAK_PIADINA_799X3991.png" alt="Chicken Alfredo Pasta Bowl">
-              </li>
-                                      <li class="ls-layer">
-                <h2 class="ls-s1" style="margin-top: 0px !important;">CHICKEN FRITTE PIADA </h2>
-
-                <p class="ls-s2" style="margin-top: 70px !important;">Italio is not responsible for licked screens.</p>
-
-                <img class="ls-s3" style="top: 120px; left: 50%;" src="http://italiokitchen.com/wp-content/uploads/2012/10/food21.png" alt="Chicken Alfredo Pasta Bowl">
-              </li>
-                                      <li class="ls-layer">
-                <h2 class="ls-s1" style="margin-top: 0px !important;">CALAMARI MISTO </h2>
-
-                <p class="ls-s2" style="margin-top: 70px !important;">Kick up your meal with tender, hand-cut strips of calamari.</p>
-
-                <img class="ls-s3" style="top: 120px; left: 50%;" src="http://italiokitchen.com/wp-content/uploads/2012/10/CALAMARI_MISO_730X301.png" alt="Chicken Alfredo Pasta Bowl">
-              </li>
-                                      <li class="ls-layer">
-                <h2 class="ls-s1" style="margin-top: 0px !important;">CHICKEN ALFREDO PASTA BOWL </h2>
-
-                <p class="ls-s2" style="margin-top: 70px !important;">Dive into a meal that&#039;s deliciously divine.</p>
-
-                <img class="ls-s3" style="top: 120px; left: 50%;" src="http://italiokitchen.com/wp-content/uploads/2012/10/alfredo-bowl.png" alt="Chicken Alfredo Pasta Bowl">
-              </li>
-            
-          </ul>
-        </div>
-      </section>
-
-      <section id='our-story'>
-        <div class='content'>
-          <div id='our-story-bowl'>
-            <div id='bowl'>
-              <img src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/home/bowl.png" alt='Salad Bowl' />
-            </div>
-
-            <div class='circle-container'>
-              <div>
-                <h3>Our Story</h3>
-
-                <p>Italio is a modern Italian kitchen created with freshness in mind. Every meal is completely customizable and handcrafted in our open kitchen with only the finest and freshest ingredients. We believe in fast, flavorful meals. And we believe great food shouldn't break the bank.</p>
-              </div>
-            </div><!-- .circle-container -->
-          </div><!-- #our-story-bowl -->
-
-          <p id='intro-arrow'><a href=''>Continue reading about Italio</a></p>
-        </div><!-- .content -->
-      </section>
-
-      <section id='intro'>
-        <div id='intro-herb'>
-          <div id='herb-container'>
-            <div id='herb'>
-              <img src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/home/herb.png" alt='Herb' />
-            </div>
-
-            <div class='circle-container'>
-              <div>
-                <p>Short on thyme? Get it to-go!</p>
-              </div>
-            </div><!-- .circle-container -->
-          </div><!-- #herb-container -->
-        </div><!-- #intro-herb -->
-
-        <div id='intro-piadina'>
-          <div id='piadina'>
-            <img src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/home/piadina.png" alt='Piadina' />
-          </div>
-
-          <div class='circle-container'>
-            <div>
-              <p>All it’s wrapped up to be, and then some.</p>
-            </div>
-          </div><!-- .circle-container -->
-        </div><!-- #intro-piadina -->
-
-        <div class='content'>
-          <p class='description'>Whether you take your time or take it to go, Italio invites you to enjoy a crisp salad, heaping pasta bowl or one of our legendary piada - thin, authentic Italian wraps filled with your choice of grilled entrée, delicate pasta, crisp vegetables, artisan cheese and house-made pesto and sauce.</p>
-
-          <p id='back-to-top'><a href='#'>Go back to top</a></p>
-        </div><!-- .content -->
-
-        <div id='tomatoes'>
-          <div id='tomato-2'>
-            <img src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/home/tomato-2-small.png" alt='Tomato' />
-          </div>
-
-          <div id='tomato-3'>
-            <img src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/home/tomato-3.png" alt='Tomato' />
-          </div>
-
-          <div id='tomato-1'>
-            <img src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/images/home/tomato-1.png" alt='Tomato' />
-          </div>
-        </div><!-- #tomatoes -->
-      </section>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden">
+            <a class="page-scroll" href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#menu">Menu</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#order">Order or Reserve a Table!</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#location">Location & Contact Information</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#social">Follow Us!</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#photos">Photos!</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#hours"><b>Open: Monday - Saturday 11 am - 9 pm</b></a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-      <footer>
-        <h4><a href='/'>Italio</a></h4>
+    <!-- /.container -->
+  </nav>
 
-        <div>
-          <nav>
-            <ul id="footer-nav" class="nav"><li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://italiokitchen.com/contact/">Contact</a></li>
-<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="http://italiokitchen.com/careers/">Careers</a></li>
-<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://italiokitchen.com/privacy-policy/">Privacy Policy</a></li>
-</ul>          </nav>
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-g-12">
+          <h1>Menu</h1>
+          <hr>
+          <h3> Appetizers </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 1. Mini Egg Roll (4) </div>
+            <div class="col-md-3"> $2.50 </div>
+            <div class="col-md-3"> 2. Egg Roll </div>
+            <div class="col-md-3"> $1.25 </div>
+            <div class="col-md-3"> 3. Fried Wonton (6) </div>
+            <div class="col-md-3"> $2.50 </div>
+            <div class="col-md-3"> 4. Crab Rangoon (4) </div>
+            <div class="col-md-3"> $2.50 </div>
+            <div class="col-md-3"> 5. Pot Stickers (6) </div>
+            <div class="col-md-3"> $4.25 </div>
+          </div>
+          <hr>
 
-          <p>&copy; 2015 Italio Restaurants, LLC. <span>All Rights Reserved</span></p>
+          <h3> Soup </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 6. Egg Drop Soup </div>
+            <div class="col-md-3"> $1.25 </div>
+            <div class="col-md-3"> 7. Wonton Soup </div>
+            <div class="col-md-3"> $1.50 </div>
+            <div class="col-md-3"> 8. Hot & Sour Soup</div>
+            <div class="col-md-3"> $1.50 </div>
+          </div>
+          <hr>
+
+          <h3> Chinese Noodle Soup </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 9. Hot Spicy Beef Noodle Soup</div>
+            <div class="col-md-3"> $7.00 </div>
+            <div class="col-md-3"> 10. Chinese Spaghetti </div>
+            <div class="col-md-3"> $6.75 </div>
+          </div>
+          <hr>
+
+          <h3> Pork </h3>
+          <h4> Small Orders: $5.75 Large Orders: $8.50</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 11. Sweet & Sour Pork </div>
+            <div class="col-md-3"> 12. Pork with Broccoli </div>
+            <div class="col-md-3"> 13. Pork with Mixed Vegetable </div>
+            <div class="col-md-3"> 14. Hot Braised Pork </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 15. Twice Pork </div>
+            <div class="col-md-3"> 16. Pork with Garlic Sauce </div>
+            <div class="col-md-3"> 17. Hunan Pork </div>
+            <div class="col-md-3"> 18. Szechuan Pork </div>
+          </div>
+          <hr>
+
+          <h3> Chicken </h3>
+          <h4> Small Orders: $5.75 Large Orders: $8.50</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 19. Sweet & Sour Chicken </div>
+            <div class="col-md-3"> 20. Chicken with Broccoli </div>
+            <div class="col-md-3"> 21. Moo Goo Gai Pan </div>
+            <div class="col-md-3"> 22. Chicken with Snow Peas </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 23. Chicken with Cashew Nuts </div>
+            <div class="col-md-3"> 24. Chicken with Mixed Vegetables </div>
+            <div class="col-md-3"> 25. Empress Chicken </div>
+            <div class="col-md-3"> 26. Hot Braised Chicken </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 27. Kung Pao Chicken </div>
+            <div class="col-md-3"> 28. Chicken with Garlic Sauce </div>
+            <div class="col-md-3"> 29. Curry Chicken </div>
+            <div class="col-md-3"> 30. Hunan Chicken </div>
+            <div class="col-md-3"> 31. Szechuan Chicken </div>
+          </div>
+          <hr>
+
+          <h3> Beef </h3>
+          <h4> Small Orders: $6.50 Large Orders: $9.25</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 32. Beef Pepper Steak </div>
+            <div class="col-md-3"> 33. Beef with Broccoli </div>
+            <div class="col-md-3"> 34. Beef with Snow Peas </div>
+            <div class="col-md-3"> 35. Mongolian Beef </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 36. Beef with Mixed Vegetables </div>
+            <div class="col-md-3"> 37. Beef with Oyster Sauce </div>
+            <div class="col-md-3"> 38. Kung Pao Beef </div>
+            <div class="col-md-3"> 39. Beef with Garlic Sauce </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 40. Hunan Beef </div>
+            <div class="col-md-3"> 41. Szechuan Beef </div>
+          </div>
+          <hr>
+
+          <h3> Seafood </h3>
+          <h4> Small Orders: $6.50 Large Orders: $9.25</h4>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 42. Sweet & Sour Shrimp </div>
+            <div class="col-md-3"> 43. Shrimp with Snow Peas </div>
+            <div class="col-md-3"> 44. Shrimp with Broccoli </div>
+            <div class="col-md-3"> 45. Shrimp with Mixed Vegetables </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 46. Shrimp with Cashew Nuts </div>
+            <div class="col-md-3"> 47. Kung Pao Shrimp </div>
+            <div class="col-md-3"> 48. Shrimp with Garlic </div>
+            <div class="col-md-3"> 49. Hunan Shrimp </div>
+          </div>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 50. Scallops with Broccoli </div>
+            <div class="col-md-3"> 51. Scallops with Mixed Vegetables </div>
+            <div class="col-md-3"> 52. Scallops with Garlic Sauce </div>
+          </div>
+          <hr>
+
+          <h3> Lo Mein </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 53. Vegetable, Chicken, or Pork</div>
+            <div class="col-md-3"> $7.00</div>
+            <div class="col-md-3"> 54. Beef or Shrimp </div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 55. Special </div>
+            <div class="col-md-3"> $8.25 </div>
+          </div>
+          <hr>
+
+          <h3> Fried Rice </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 56. Plain </div>
+            <div class="col-md-3"> $3.00 - $4.50 </div>
+            <div class="col-md-3"> 57. Vegetable/Chicken/Pork/Ham </div>
+            <div class="col-md-3"> $3.75 - $5.25 </div>
+            <div class="col-md-3"> 58. Beef or Shrimp </div>
+            <div class="col-md-3"> $4.00-$5.75 </div>
+            <div class="col-md-3"> 59. Special </div>
+            <div class="col-md-3"> $4.25 - $6.25 </div>
+          </div>
+          <hr>
+
+          <h3> Vegetables </h3>
+          <div class="row" align ="center">
+            <div class="col-md-3"> 60. Stir-Fry Broccoli </div>
+            <div class="col-md-3"> $5.00 - $7.25 </div>
+            <div class="col-md-3"> 61. Vegetable Delight</div>
+            <div class="col-md-3"> $5.00 - $7.25 </div>
+            <div class="col-md-3"> 62. Broccoli with Garlic Sauce </div>
+            <div class="col-md-3"> $5.00 - $7.25 </div>
+            <div class="col-md-3"> 63. Bean Curd Mixed Vegetables </div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 64. Bean Curd, Szechuan Style</div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 65. Dry Sauteed String Bean </div>
+            <div class="col-md-3"> $7.50 </div>
+            <div class="col-md-3"> 66. Egg Plant with Garlic Sauce</div>
+            <div class="col-md-3"> $7.50 </div>
+          </div>
+          <hr>
+
+          <h3> Chef's Specialties </h3>
+          <h5> 67. Happy Family - $12.00</h5>
+          <div>Shrimp, scallops, beef and chicken sauteed with baby corn, mushrooms, snow peas, carrots, water chestnut, broccoli in special sauce</div>
+          <h5> 68. Triple Delight - $11.50</h5>
+          <div>Shrimp, chicken and beef with snow peas, baby corn, mushrooms, carrot, broccoli, water chestnuts</div>
+          <h5> 69. Kung Pao Triple - $11.50</h5>
+          <div>Beef, scallops, shrimp with green pepper, onion, carrot, peanuts</div>
+          <h5> 70. Sizzling Beef & Scallops - $11.50</h5>
+          <div>Beef, scallops with baby corn, mushrooms, carrot, broccoli, water chestnuts in chef's special sauce</div>
+          <h5> 71. Double Delight with Mixed Vegetables - $11.50</h5>
+          <div>Shrimp, scallops with baby corn, mushrooms, carrots, broccoli, water chestnuts in chef's special sauce</div>
+          <h5> 72. Pineapple Shrimp - $11.50</h5>
+          <div>Shrimp sauteed with pineapple</div>
+          <h5> 73. General Tso's Chicken - $10.50</h5>
+          <div>Chicken, broccoli with tingling hot sauce</div>
+          <h5> 74. Sesame Chicken - $10.50</h5>
+          <div>Chicken sauteed with broccoli in special sauce</div>
+          <h5> 75. Orange Chicken -$10.50</h5>
+          <div>Chicken sauteed with broccoli, orange peel in special sauce</div>
+          <h5> 76. Amazing Chicken - $10.50</h5>
+          <div>Sliced chicken sauteed with snow peas, mushrooms, water chestnut in special sauce</div>
+          <h5> 77. Fish with Mixed Vegetable - $10.50</h5>
+          <div>Sliced fish with snow peas, mushroom, water chestnut and broccoli</div>
+          <h5> 78. General Tso's Fish - $10.50</h5>
+          <div>Sliced fish sauteed with broccoli</div>
         </div>
-      </footer>
-    </section><!-- // END -->
-  </body>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Order Online Section -->
+<section id="order" class="order-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" align = "center">
+        <h1>Order Online!</h1>
 
-      <script src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/scripts/libs/layerslider.min.js"></script>
-   
-  
-  
-  <!-- page scripts -->
-      <script src="http://italiokitchen.com/wp-content/themes/italio/inc/assets/scripts/index.min.js"></script>
-  
-  <!-- Javascript -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Order Now!
+        </button>
 
-  <script type="text/javascript">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Order Form</h4>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                 <h4> Name </h4>
+                 <input type="text" class="form-control" placeholder = "Blake Avery">
+               </div>
+               <div class="input-group">
+                 <h4> Address </h4>
+                 <input type="text" class="form-control" placeholder = "1234 Street, City, State, Zip">
+               </div>
+               <div class="input-group">
+                 <h4> Phone Number </h4>
+                 <input type="text" class="form-control" placeholder = "513-123-4567">
+               </div>
+               <div class="input-group">
+                 <h4> Email </h4>
+                 <input type="text" class="form-control" placeholder = "email@domain.com">
+               </div>
+               <div class="input-group">
+                 <h4> Order </h4>
+                 <p> Please enter the number corresponding to one of our 78 menu items and the amount of each item you would like to order.
+                   <form action="action_page.php">
+                    Menu Item #1:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #2:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #3:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #4:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                    <br>
+                    Menu Item #5:
+                    <input type="number" name="quantity" min="1" max="78">
+                    Quantity:
+                    <input type="number" name="quantity" min="1" max="10">
+                  </form>
+                </div>
+                <div class="input-group">
+                  <h4> Estimated Pickup Time </h4>
+                  <input type="text" class="form-control" placeholder = "6:30 PM">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thankyou">Place Order</button>
+                </div>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-28396785-1']);
-  _gaq.push(['_trackPageview']);
+                <!-- Order has been received section -->
+                <div class="modal fade" id="thankyou" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Thank you!</h4>
+                      </div>
+                      <div class="modal-body">
+                       <h4>Your order has been received! A representative will contact you with any questions about your order. See you soon! </h4>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-6 clearfix" align = "Center">
+      <div class="reservation-widget">
+        <form method="get" id="OT_form" action="http://www.toptable.co.uk/restaurant-search.aspx" target="_blank" class="top-table-widget">
+          <header>
+            <h1>Make a Reservation<h1>
+          </header>
+          <h5> Day </h5>
+          <div class="input-wrapper icon-date">
+            <input name="startDate" id="datepicker" type="text" value="dd/mm/yyyy" autocomplete="off" />
+          </div>
+          <h5> Time </h5>
+          <div class="input-wrapper icon-time">
+            <select name="ResTime" id="ResTime">
+              <option value="11:00" >11:00</option>
+              <option value="11:30" >11:30</option>
+              <option value="12:00" >12:00</option>
+              <option value="12:30" >12:30</option>
+              <option value="13:00" >13:00</option>
+              <option value="13:30" >13:30</option>
+              <option value="14:00" >14:00</option>
+              <option value="14:30" >14:30</option>
+              <option value="15:00" >15:00</option>
+              <option value="15:30" >15:30</option>
+              <option value="16:00" >16:00</option>
+              <option value="16:30" >16:30</option>
+              <option value="17:00" >17:00</option>
+              <option value="17:30" >17:30</option>
+              <option value="18:00" >18:00</option>
+              <option value="18:30" >18:30</option>
+              <option value="19:00" >19:00</option>
+              <option value="19:30" >19:30</option>
+              <option value="20:00" >20:00</option>
+            </select>
+          </div>
+          <h5> Party Size </h5>
+          <div class="input-wrapper icon-party">
+            <select name="PartySize" id="PartySize">
+              <option value="1" >1 person</option>
+              <option value="2" selected="selected">2 people</option>
+              <option value="3" >3 people</option>
+              <option value="4" >4 people</option>
+              <option value="5" >5 people</option>
+              <option value="6" >6 people</option>
+              <option value="7" >7 people</option>
+              <option value="8" >8 people</option>
+              <option value="9" >9 people</option>
+              <option value="10" >10 people</option>
+              <option value="11" >11 people</option>
+              <option value="12" >12 people</option>
+              <option value="13" >13 people</option>
+              <option value="14" >14 people</option>
+              <option value="15" >15 people</option>
+              <option value="16" >16 people</option>
+              <option value="17" >17 people</option>
+              <option value="18" >18 people</option>
+              <option value="19" >19 people</option>
+              <option value="20" >20 people</option>
+            </select>
+          </div>
+          <br>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+          <button>Find a Table</button>
 
- </script>
+          <input type="hidden" name="RestaurantID" id="RestaurantID" value="60217">
+          <input type="hidden" name="rid" id="rid" value="60217">
+          <input type="hidden" name="GeoID" id="GeoID" value="72">
+          <input type="hidden" name="txtDateFormat" id="txtDateFormat" value="dd/mm/yyyy">
+          <input type="hidden" name="RestaurantReferralID" id="RestaurantReferralID" value="60217">
+        </form>
+        <p>*Note: This will take you to an opentable account for fifteen restaraunt as an OpenTable account has not been created for Wong's Wok</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Location & Contact Section -->
+<section id="location" class="location-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Location & Contact Information</h1>
+        <h3> 565 Melville Ave.</h3>
+        <h3> St. Louis, MO 63130</h3>
+        <h3> Phone: (314)-726-0976</h3>
+        <div class = "caption">
+          <div id="googlemap" class = "map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Media Section -->
+<section id="social" class="social-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Follow Us!</h1>
+      </div>
+      <div class="row">
+        <a href="https://twitter.com/">
+          <img src = "https://lh3.ggpht.com/lSLM0xhCA1RZOwaQcjhlwmsvaIQYaP3c5qbDKCgLALhydrgExnaSKZdGa8S3YtRuVA=w300" style = "width:300px;height:300px">
+        </a>
+        <a href="https://facebook.com/">
+          <img src = "https://lh5.ggpht.com/_XklY7dK6yGsYt53X15RIp7-tbdjWMwQwl_iUAcW-uSq_8zAprmywdn5DQfBHvxZurs1=w300" style = "width:300px;height:300px">
+        </a>
+        <a href="https://instagram.com/">
+          <img src = "https://pbs.twimg.com/profile_images/1550954462/instagramIcon_400x400.png" style = "width:300px;height:300px">
+        </a>
+        <p> *Note: Links take you to homepages of each social media site. Wong's Wok does not use social media in their operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photos Section -->
+<section id="photos" class="photos-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Photos!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img src = "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/v/t1.0-1/c33.33.414.414/s160x160/943476_274645426012139_1234521515_n.jpg?oh=f32ab558810d074bbefa4751ee98b445&oe=5549CD72&__gda__=1431316449_800e5d959b2203df0c9d5836591357bf" style = "width:300px;height:300px">
+        </div>
+        <div class = "col-md-4">
+          <img src = "http://physicalculturist.ca/wp-content/uploads/2013/12/stirfry-chinese-people-eating.jpg" style = "width:300px;height:300px">
+        </div>
+        <div class = "col-md-4">
+          <img src = "http://wonderopolis.org/wp-content/uploads/2013/05/955-Food-in-China-896x481.jpg" style = "width:300px;height:300px">
+        </div>
+        <h4>
+          Email us a picture of you enjoying Wong's Wok and we will put you on our site!
+          <a href="mailto:blakeavery@wustl.edu">Email Picture</a>
+        </h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Scrolling Nav JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+
+</body>
 
 </html>
-
-<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
-
- Served from: italiokitchen.com @ 2015-02-25 20:51:38 by W3 Total Cache -->
